@@ -1,11 +1,36 @@
 <html>
 <head>
     <title>Random Quote Generator</title>
+    <script src="https://use.fontawesome.com/f84289e89a.js"></script>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <style>
+        body{
+            color:white;
+        }
         .verticle-middle{
             padding:10%;
+        }
+        .jumbotron{
+            background-color:#4B515D;
+            height:300px;
+        }
+        a, a:visited{
+            background-color:#3F729B;
+            border:none;
+            color:white;
+        }
+        a:focus, a:active, a:hover{
+            background-color:#335d7c;
+            border:none;
+            color:white;
+        }
+        h3 i{
+            font-size: 2em;
+        }
+        .lead:before{
+            content:"- ";
+            font-size: 1em;
         }
     </style>
 
@@ -13,19 +38,22 @@
 <body>
 <div class="container verticle-middle">
 <div class="jumbotron">
-    <div class="container">
-        <h1>Random Quote Machine</h1>
-        <p class="lead">Quote</p>
+    <div class="container align-middle">
+        <h3>Random Quote Machine</h3>
+        <p class="lead">Click the Button to Get a Quote!</p>
     </div>
 </div>
-        <a id="getQuote" class="btn btn-primary btn-lg btn-block float-right" href="#" role="button">Get Another</a>
+        <a id="getQuote" class="btn btn-primary btn-lg float-left" href="#" role="button">Get Another</a>
+        <a class="btn btn-primary btn-lg float-right" href="#" role="button">Tweet!</a>
 </div>
 <!-- Bootstrap -->
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script>
+    //Global Variables
     var quotes = []
+    var quoteIcon = '<i class="fa fa-quote-left" aria-hidden="true"></i> ';
     function quote(text, author){
         this.text = text;
         this.author = author;
@@ -47,14 +75,10 @@
             console.log(quotes);
         });
     }
-    function getNextQuote(){
-        var index = Math.floor(Math.random()*quotes.length);
-        return quotes[index];
-    }
     function swapQuote(){
-        quote = getNextQuote();
-        $("h1").html(quote.text);
-        $(".lead").html(quote.author);
+        var index = Math.floor(Math.random()*quotes.length);
+        $("h3").html(quoteIcon+quotes[index].text);
+        $(".lead").html(quotes[index].author);
     }
 
     $(document).ready(function(){

@@ -25,6 +25,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script>
+    var quotes = []
     function quote(text, author){
         this.text = text;
         this.author = author;
@@ -32,7 +33,7 @@
     function loadJSON(callback){
         var request = new XMLHttpRequest();
         request.overrideMimeType("application/json");
-        request.open("GET", "http://quotes.rest/quote/random.json", true);
+        request.open("GET", "quotes.json", true);
         request.onreadystatechange = function(){
             if(request.readyState==4 && request.status=="200"){
                  callback(request.responseText);   
@@ -42,45 +43,22 @@
     }
     function init(){
         loadJSON(function(response){
-            var json = JSON.parse(response);
-            alert(json);
+            quotes = JSON.parse(response);
+            console.log(quotes);
         });
     }
-    function incrIndex(){
-        if(quoteIndex<quotes.length-1){
-            quoteIndex+=1;
-        }else{
-            quoteIndex=0;
-        }
-        return quoteIndex;
-    }
     function getNextQuote(){
-        return quotes[incrIndex()];
+        var index = Math.floor(Math.random()*quotes.length);
+        return quotes[index];
     }
     function swapQuote(){
         quote = getNextQuote();
         $("h1").html(quote.text);
         $(".lead").html(quote.author);
     }
-    function firstQuote(){
-        $("h1").html(quotes[0].text);
-        $(".lead").html(quotes[0].author);
-    }
-/*    $(document).ready(function(){
-        $.getJSON("quotes.json", function(json) {
-            quotes = json;
-        });
-    });*/
-    
-    var quotes = []
-    quotes.push(new quote("hello","lauryn"));
-    quotes.push(new quote("hi","jordy"));
-    quotes.push(new quote("howdy","Krystal"));
 
-    var quoteIndex = 0; 
     $(document).ready(function(){
         init();
-        firstQuote();
         $("#getQuote").on("click", function(){
             swapQuote();
         });

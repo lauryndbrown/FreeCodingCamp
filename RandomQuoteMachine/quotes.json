@@ -1,14 +1,82 @@
 [
   {
-    "text":"Hello.",
-    "author":"Lauryn"
+    "text":"Be yourself; everyone else is already taken.",
+    "author":"Oscar Wilde"
   },
   {
-    "text":"Hi.",
-    "author":"Jordy"
+    "text":"Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.",
+    "author":"Bernard M. Baruch"
   },
   {
-    "text":"Howdy",
-    "author":"Krystal"
+    "text":"A room without books is like a body without a soul.",
+    "author":"Marcus Tullius Cicero"
+  },
+  {
+    "text":"You know you're in love when you can't fall asleep because reality is finally better than your dreams.",
+    "author":"Dr. Seuss"
+  },
+  {
+    "text":"In three words I can sum up everything I've learned about life: it goes on.",
+    "author":"Robert Frost"
+  },
+  {
+    "text":"Always forgive your enemies; nothing annoys them so much.",
+    "author":"Oscar Wilde"
+  },
+  {
+    "text":"Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author":"Mahatma Gandhi"
+  },
+  {
+    "text":"It does not do to dwell on dreams and forget to live.",
+    "author":"J.K. Rowling, Harry Potter and the Sorcerer's Stone"
+  },
+  {
+    "text":"For every minute you are angry you lose sixty seconds of happiness.",
+    "author":"Ralph Waldo Emerson"
+  },
+  {
+    "text":"It is never too late to be what you might have been.",
+    "author":"Unknown"
+  },
+  {
+    "text":"My thoughts are stars I cannot fathom into constellations.",
+    "author":"John Green, The Fault in Our Stars"
+  },
+  {
+    "text":"Beauty is in the eye of the beholder and it may be necessary from time to time to give a stupid or misinformed beholder a black eye.",
+    "author":"Jim Henson"
+  },
+  {
+    "text":"I'm not afraid of death; I just don't want to be there when it happens.",
+    "author":"Woody Allen"
+  },
+  {
+    "text":"It’s no use going back to yesterday, because I was a different person then.",
+    "author":"Lewis Carroll, Alice in Wonderland"
+  },
+  {
+    "text":"Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    "author":"Mahatma Gandhi"
+  },
+  {
+    "text":"Well-behaved women seldom make history.",
+    "author":" Laurel Thatcher Ulrich"
+  },
+  {
+    "text":"Trees are poems that the earth writes upon the sky.",
+    "author":"Anonymous"
+  },
+  {
+    "text":"Only in the darkness can you see the stars.",
+    "author":"Martin Luther King Jr."
+  },
+  {
+    "text":"It's kind of fun to do the impossible.",
+    "author":" Walt Disney"
+  },
+  {
+    "text":"Hope Smiles from the threshold of the year to come, Whispering 'it will be happier'...",
+    "author":"Mahatma Gandhi"
   }
 ]
